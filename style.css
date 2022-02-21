@@ -1,0 +1,148 @@
+.wrapper{
+  width: 562px;
+  height:562px;
+  font-size: 82px;
+  overflow: hidden;
+  background: #eee;
+}
+
+#button_wrapper{
+  margin-bottom: 20px;
+}
+
+#button_wrapper:hover {
+  margin-bottom: 20px;
+  animation: shake 0.25s;
+  animation-iteration-count: infinite;
+  /* background-color: rgb(255, 0, 0, 0.5); */
+}
+
+button {
+  padding: 10px 60px;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.box > div{
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.box{
+  height: 100%;
+  width: 185px;
+  border: 2px solid black;
+  display: table-cell;
+}
+
+.box:hover{
+  background: #f7ff66;
+  cursor: pointer;
+}
+
+.opened{
+  background: #66ff78;
+}
+
+.opened > div{
+  font-weight: bold;
+  color: red;
+}
+
+/* flipping */
+.flip-container {
+  perspective: 1000;
+  transform-style: preserve-3d;
+  height: 187px;
+  display: table;
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+}
+
+.flip{
+  /* transform: rotateY(180deg); */
+  background: #eee;
+  /* -webkit-transform: rotateY(180deg); */
+}
+
+.flipper {
+  transition: 0.6s;
+  -webkit-transition: -webkit-transform 0.6s;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  position: relative;
+}
+
+button:hover{
+	box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
+}
+@keyframes pulse{
+	0%{box-shadow: 0 0 0 0 #ffe521}
+}
+button:active{
+	box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse2 0.25s;
+}
+
+button:focus{
+  color: white;
+  background-color: #f00609;
+}
+
+@keyframes pulse2{
+	0%{box-shadow: 0 0 0 0 #f00609}
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+/* --------при нажатиии работает др элемент(должны быть в одном блоке)------------- */
+.wrapper:active .box{
+  animation: shake 0.25s;
+  animation-iteration-count: infinite;
+  /* background-color: rgb(255, 0, 0, 0.5); */
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
