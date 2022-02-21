@@ -138,10 +138,9 @@ $(function(){
   $('#button_wrapper').click(function(){
       location.reload();
   });
-
-});
-
 // const btn = document.querySelector('button');
 // btn.addEventListener('click', () => {
 //   btn.style.backgroundColor = '#red';
 // });
+});
+
